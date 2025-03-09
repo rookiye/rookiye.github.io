@@ -1,0 +1,301 @@
+/* 全局样式 */
+body {
+    font-family: "Georgia", "Times New Roman", serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+    color: #333;
+}
+
+/* 导航栏 */
+nav {
+    background-color: #ddd;
+    padding: 15px 0;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    box-shadow: 0px 4px 2px -2px gray;
+}
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+nav ul li {
+    margin: 0 20px;
+}
+nav ul li a {
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* 主要布局 */
+.container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    margin: 100px auto;
+    max-width: 1200px;
+    padding: 20px;
+}
+
+/* 侧边栏 */
+.sidebar {
+    width: 14%;
+    text-align: left;
+    position: fixed; /* 固定位置 */
+    left: 12%; /* 调整到合适位置 */
+    top: 150px; /* 距离顶部的距离 */
+}
+.sidebar img {
+    width: 200px;
+    height: 272px;
+    object-fit: cover; /* 保持图片比例填充 */
+    border-radius: 10px;
+}
+
+.social-links {
+    display: flex;
+    flex-direction: column; /* 垂直排列 */
+    align-items: center; /* 整个部分居中 */
+    position: relative;
+    margin-left: -18%; /* 让社交链接部分向左移动一些 */
+}
+
+.social-links p {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* 让图标和文字左对齐 */
+    width: 140px; /* 控制宽度，使其居中后再左对齐 */
+    font-size: 16px;
+    color: #555; /* 默认灰色 */
+    margin: 5px 0; /* 缩小段落间距，减少整体间隔 */
+}
+
+.social-links a {
+    text-decoration: none; /* 去掉超链接下划线 */
+    color: #555; /* 默认灰色 */
+    transition: color 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* 文字 & 图标左对齐 */
+    width: 140px; /* 确保文字和图标有适当的空间 */
+}
+
+.social-links i {
+    margin-right: 6px; /* 控制图标与文字的间距 */
+    font-size: 18px;
+    color: #555;
+    transition: color 0.3s ease;
+}
+
+
+.name {
+    font-size: 24px;
+    font-weight: bold;
+}
+.subtitle {
+    font-size: 16px;
+}
+.quote {
+    font-style: italic;
+    font-size: 16px;
+    color: #555;
+}
+/* 主要内容 */
+.content {
+    text-align: justify;
+    flex: 1;
+    width: 78%; /* 调整宽度以避免和侧边栏重叠 */
+    max-width: 1200px;
+    margin-left: 25%; /* 让右侧内容不会被侧边栏挡住 */
+    padding-bottom: 50px; /* 避免内容过长时太紧凑 */
+}
+
+/* 教育经历部分样式 */
+/* 教育背景整体布局 */
+.edu-container {
+    margin-top: 20px;
+}
+
+/* 教育经历的左右布局 */
+.edu-entry {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 15px 0;
+}
+
+/* 左侧：学校名称 */
+.edu-left {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* 右侧：时间 + 学位 */
+.edu-right {
+    text-align: right;
+    font-size: 16px;
+    color: #555;
+}
+
+/* 短横线（分隔不同学校） */
+.edu-divider {
+    border: none;
+    border-top: 2px solid #ddd; /* 线条颜色 */
+    width: 100%; 
+    margin: 15px auto; /* 上下间距 & 居中 */
+}
+
+/* Work Experience Section */
+.work-container {
+    margin-top: 20px;
+}
+
+/* Work Entry (Company, Description, Date) */
+.work-entry {
+    display: flex;
+    flex-direction: column; /* 垂直排列：公司名 -> 工作描述 -> 时间 */
+    align-items: flex-start;
+    padding: 15px 0;
+}
+
+/* 公司名称 */
+.work-left {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 5px; /* 增加和描述之间的间距 */
+}
+
+/* 时间 */
+.work-right {
+    font-size: 16px;
+    color: #555;
+    font-weight: bold;
+    align-self: flex-end;
+    margin-top: 5px; /* 让时间和描述之间有间隔 */
+}
+
+.supervisor {
+    font-size: 16px;
+    color: #555;
+    font-weight: bold;
+    align-self: flex-end;
+    margin-top: 5px; /* 让时间和描述之间有间隔 */
+}
+
+/* 工作描述 */
+.work-description {
+    font-size: 16px;
+    color: #444;
+    line-height: 1.6;
+    text-align: justify;
+}
+
+/* 分隔线 */
+.work-divider {
+    border: none;
+    border-top: 1px solid #ddd;
+    width: 100%;
+    margin: 15px auto;
+}
+
+h2 {
+    font-size: 20px;
+    border-bottom: 2px solid #333;
+    padding-bottom: 5px;
+}
+p {
+    font-size: 16px;
+    line-height: 1.8; /* 增加行间距 */
+}
+
+/* Hobbies Section */
+.hobby-entry {
+    margin-top: 20px;
+    padding-bottom: 15px;
+}
+
+/* Hobby Title */
+.hobby-entry h3 {
+    font-size: 20px;
+    font-weight: bold;
+    color: #444;
+    margin-bottom: 10px;
+}
+
+/* Hobby Description */
+.hobby-entry p {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.6;
+    text-align: justify;
+}
+
+/* Hobbies Section */
+.hobby-entry {
+    margin-top: 20px;
+    padding-bottom: 15px;
+}
+
+/* Hobby Title */
+.hobby-entry h3 {
+    font-size: 20px;
+    font-weight: bold;
+    color: #444;
+    margin-bottom: 10px;
+}
+
+/* Hobby Description */
+.hobby-entry p {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.6;
+    text-align: justify;
+}
+
+/* Feynman Quote */
+.feynman-quote {
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 15px;
+    color: #333;
+}
+
+/* Blockquote Styling */
+blockquote {
+    font-style: italic;
+    font-size: 16px;
+    color: #666;
+    padding-left: 15px;
+    border-left: 3px solid #bbb;
+    margin-top: 10px;
+}
+
+/* Hobby Section */
+.hobby-entry {
+    margin-top: 20px;
+    padding-bottom: 15px;
+}
+
+/* Hobby Title */
+.hobby-entry h3 {
+    font-size: 20px;
+    font-weight: bold;
+    color: #444;
+    margin-bottom: 10px;
+}
+
+/* Hobby Description */
+.hobby-entry p {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.6;
+    text-align: justify;
+}
